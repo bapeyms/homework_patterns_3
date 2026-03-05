@@ -21,7 +21,7 @@ public:
 
 	void showInfo()
 	{
-		cout << "-- CAR INFO --" << endl;
+		cout << "--- CAR INFO ---" << endl;
 		cout << "Shell: " << shell << endl;
 		cout << "Engine: " << engine << endl;
 		cout << "Wheel: " << wheel << endl;
