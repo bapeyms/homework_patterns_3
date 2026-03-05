@@ -104,6 +104,27 @@ public:
 	}
 };
 
+class HyundaiGetzBuilder : public CarBuilder
+{
+public:
+	void buildShell()
+	{
+		car.setShell("Hatchback");
+	}
+	void buildEngine()
+	{
+		car.setEngine(66);
+	}
+	void buildWheel()
+	{
+		car.setWheel(13);
+	}
+	void buildGearbox()
+	{
+		car.setGearbox("4 Auto");
+	}
+};
+
 class Shop
 {
 	CarBuilder* builder;
@@ -139,10 +160,16 @@ int main()
 	CarBuilder* builder = new DaewooLanosBuilder();
 	Client(builder);
 	delete builder;
+
 	builder = new FordProbeBuilder();
 	Client(builder);
 	delete builder;
+
 	builder = new UAZpatriotBuilder();
+	Client(builder);
+	delete builder;
+
+	builder = new HyundaiGetzBuilder();
 	Client(builder);
 	delete builder;
 	return 0;
